@@ -23,7 +23,7 @@ def load_model(model_path):
 # model_dir = "/app/models"  # Path where models are stored inside the container
 
 # Définir le chemin relatif du répertoire des modèles
-model_dir = "models"
+model_dir = "Models"
 
 # Debugging paths: Check if the model directory exists
 st.write("### Checking if model directory exists...")
