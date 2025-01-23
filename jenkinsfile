@@ -1,46 +1,17 @@
 pipeline {
     agent any
-    environment {
-        PROJECT_ID = 'YOUR_GCP_PROJECT_ID'
-        SERVICE_NAME = 'your-streamlit-service'
-        REGION = 'europe-west1'
-        IMAGE_NAME = "gcr.io/${PROJECT_ID}/your-streamlit-image:${BUILD_NUMBER}"
-    }
     stages {
-        stage('Checkout') {
+        stage('Pull Docker Image') {
             steps {
-                git branch: 'main', url: 'YOUR_GIT_REPOSITORY_URL'
-            }
-        }
-        stage('Build and Test') {
-            steps {
-                sh 'python -m venv .venv'
-                sh '. .venv/bin/activate'
-                sh 'pip install -r requirements.txt'
-                sh 'pytest tests/' # Exécution des tests
-                sh 'docker build -t your-streamlit-image .'
-            }
-        }
-        stage('Build Docker Image (Cloud Build)') {
-          steps {
-              gcloudBuild steps: [
-                      [name: 'gcr.io/cloud-builders/docker', args: ['build', '-t', "${IMAGE_NAME}", '.']]
-              ], projectId: env.PROJECT_ID
-          }
-        }
-        stage('Push Docker Image to GCR') {
-            steps {
-                withCredentials([file(credentialsId: 'gcp-credentials', variable: 'GCP_KEY')]) {
-                    sh "gcloud auth activate-service-account --key-file=${GCP_KEY}"
-                    sh "docker push ${IMAGE_NAME}"
+                script {
+                    sh 'docker pull fraud:latest'  // Récupère l'image locale ou distante
                 }
             }
         }
-        stage('Deploy to Cloud Run') {
+        stage('Deploy to AWS') {
             steps {
-                withCredentials([file(credentialsId: 'gcp-credentials', variable: 'GCP_KEY')]) {
-                    sh "gcloud auth activate-service-account --key-file=${GCP_KEY}"
-                    sh "gcloud run deploy ${SERVICE_NAME} --image ${IMAGE_NAME} --region ${REGION} --platform managed --allow-unauthenticated"
+                script {
+                    sh './deploy_aws.sh'  // On créera ce script pour déployer sur AWS
                 }
             }
         }
