@@ -1,0 +1,18 @@
+# Manipulation des données
+pandas
+
+# Calculs numériques
+numpy
+
+# Visualisation des données
+matplotlib
+seaborn
+
+# Modélisation et évaluation
+scikit-learn
+
+# Développement et entraînement de modèles de machine learning
+tensorflow
+
+# Développement d'interfaces interactives
+streamlit
