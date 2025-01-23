@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # Variables AWS
-AWS_REGION="us-east-1"   # Remplace par ta région AWS
-INSTANCE_ID="i-xxxxxxxxxxxxx"  # ID de ton instance EC2 (tu peux le récupérer avec l'AWS CLI)
+PUBLIC_IP="16.170.228.250"
 IMAGE_NAME="fraud:latest"
 CONTAINER_NAME="fraud_app"
 
-# Connexion SSH et déploiement sur EC2
-ssh -o StrictHostKeyChecking=no ec2-user@<Public_IP_de_ton_instance> << EOF
+# Connexion SSH et déploiement
+ssh -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP << EOF
     docker stop $CONTAINER_NAME || true
     docker rm $CONTAINER_NAME || true
     docker pull $IMAGE_NAME
