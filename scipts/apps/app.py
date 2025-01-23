@@ -20,7 +20,10 @@ def load_model(model_path):
         return pickle.load(file)
 
 # Define the directory for models
-model_dir = "/app/models"  # Path where models are stored inside the container
+# model_dir = "/app/models"  # Path where models are stored inside the container
+
+# Définir le chemin relatif du répertoire des modèles
+model_dir = "models"
 
 # Debugging paths: Check if the model directory exists
 st.write("### Checking if model directory exists...")
