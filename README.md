@@ -20,25 +20,32 @@
 ---
 
 ## ✨ **1. Introduction**
-The **Credit Card Fraud Detection** project leverages machine learning and deep learning techniques to identify fraudulent transactions. The model is developed to improve detection accuracy while maintaining efficiency and scalability. 
+The **Credit Card Fraud Detection**This project focuses on detecting fraudulent and non-fraudulent banking transactions by leveraging machine learning and deep learning techniques. The algorithms employed include logistic regression, multilayer perceptrons (MLP), and random forests, all trained to maximize accuracy and uncover complex patterns in transactional data. The pipeline has been deployed on an AWS EC2 instance, ensuring scalability and efficient handling of large-scale computations. Feature engineering played a crucial role in extracting relevant indicators and identifying anomalous behaviors. This project emphasizes a balance between performance, accuracy, and adaptability to modern financial systems.   
 
 ### Theoretical Context:
-Fraud detection models aim to classify transactions as either legitimate or fraudulent. Machine learning techniques like Logistic Regression and Random Forest, along with deep learning (MLP), are employed to achieve this goal.
+Fraud detection models aim to classify transactions as either fraudulent or non-fraudulent. To achieve this goal, machine learning techniques such as Logistic Regression and Random Forest are used, alongside deep learning methods like Multilayer Perceptrons (MLP). These algorithms enable the extraction of complex patterns in transactional data, thereby enhancing the accuracy and reliability of predictions.
 
 🎯 **Main Objectives:**
 - Identify fraudulent transactions with high accuracy.
 - Provide a scalable and interactive deployment solution.
 - Implement a robust CI/CD pipeline for consistent updates.
 
-[View Visuals for Introduction](#)
-
 ---
 
 ## 🔍 **2. Data Exploration (EDA)**
-The dataset provides transaction information, including numerical attributes, time, amount, and a fraud label.
+The dataset provides transaction information, including numerical attributes, amount, and a fraud label.
+
+-  Data set: Head of Dataset:
+  ![Head of Data set](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Head_data.png)
 
 ### Key Steps:
-1. Analyze class distribution (fraud vs. legitimate).
+Step 2: Display DataFrame Information
+In this step, we display the DataFrame information, including the number of rows, the number of columns, the data type of each column, and whether any missing values are present. This helps in understanding the structure of the data and identifying potential issues.
+
+-  Data set: Dataframe Information:
+  ![Dataframe Information](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/data_types.png)
+
+
 2. Visualize feature correlations.
 3. Check for outliers and anomalies.
 
