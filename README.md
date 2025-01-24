@@ -314,7 +314,7 @@ Before starting, ensure that Jenkins is installed and set up on your machine or 
 
 2. Create a New Pipeline Job
 
-G1- o to the Jenkins dashboard and click New Item in the left sidebar.
+1- Go to the Jenkins dashboard and click New Item in the left sidebar.
 2- Name your job (e.g., FraudDetectionPipeline).
 3- Select the Pipeline option (this will allow you to create a pipeline using a Jenkinsfile).
 4- Click OK.
@@ -323,6 +323,7 @@ G1- o to the Jenkins dashboard and click New Item in the left sidebar.
 
 Define the Git Repository
 If your project is hosted on a Git repository (e.g., GitHub, GitLab), configure the connection to that repository:
+
 1- In the Pipeline section, under Definition, select Pipeline script from SCM.
 2- In SCM, choose Git.
 3-In Repository URL, provide the URL of your Git repository (e.g., https://github.com/username/repository.git).
