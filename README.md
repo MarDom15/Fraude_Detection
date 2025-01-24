@@ -35,13 +35,13 @@ Fraud detection models aim to classify transactions as either fraudulent or non-
 The dataset provides transaction information, including numerical attributes, amount, and a fraud label.
 Step 1: Load the Dataset
 
--  Data set: Head of Dataset:
+-  Data set : Head of Dataset:
 
   ![Head of Data set](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Head_data.png)
 
 Step 1': Check for missing values in the DataFrame
 
--  MIssing Values:Check for missing values in the DataFrame :
+-  MIssing Values : Check for missing values in the DataFrame :
 
   ![Check for missing values in the DataFrame](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/missing_values.png)
 
@@ -49,35 +49,35 @@ Step 1': Check for missing values in the DataFrame
 Step 2: Display DataFrame Information
 In this step, we display the DataFrame information, including the number of rows, the number of columns, the data type of each column, and whether any missing values are present. This helps in understanding the structure of the data and identifying potential issues.
 
--  Data set: Dataframe Information:
+-  Data set : Dataframe Information:
 
   ![Dataframe Information](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/data_types.png)
 
 Step 3: Visualize the distribution of classes
 In this step, we visualize the distribution of classes (fraudulent and non-fraudulent) in the dataset. This helps in understanding the class balance and identifying any potential imbalances, which can affect the performance of machine learning models.
 
--  Distribution: Visualisation of Distribution of classes:
+-  Distribution : Visualisation of Distribution of classes:
 
   ![Distribution of classes](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/class_distribution.png)
 
 Step 4: Statistical summary of the data
 In this step, we generate a statistical summary of the data by calculating measures such as mean, standard deviation, minimum and maximum values, and quartiles. This provides an overview of the data's characteristics and helps in detecting any anomalies or outliers in the features.
 
--  Statistical Summary: Statistical Summary of the data:
+-  Statistical Summary : Statistical Summary of the data:
 
   ![Statistical Summary](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/statistical_data_sunnary.png)
 
 Step 5: Visualize the distribution of fraudulent transaction amounts
 In this step, we visualize the distribution of fraudulent transaction amounts. This helps in understanding the patterns related to fraudulent transactions and identifying specific trends, such as higher or lower amounts associated with fraud.
 
--  Visualisation of distribution: Visualize the distribution of fraudulent transaction amounts :
+-  Visualisation of distribution : Visualize the distribution of fraudulent transaction amounts :
 
   ![Visualize the distribution of fraudulent transaction amounts](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_fraudulent_transaction.png)
 
 Step 6: Visualize the distribution of non-fraudulent transaction amounts
 In this step, we visualize the distribution of non-fraudulent transaction amounts. This analysis helps in understanding the patterns related to legitimate transactions and identifying trends or specific characteristics of amounts associated with non-fraudulent transactions.
 
--  Visualisation of distribution: Visualize the distribution of non-fraudulent transaction amounts :
+-  Visualisation of distribution : Visualize the distribution of non-fraudulent transaction amounts :
 
   ![Visualize the distribution of non-fraudulent transaction amounts](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_nonfraudulent_transaction.png)
 
@@ -112,22 +112,22 @@ Strong positive variables: V4, V11
 Strong negative variables: V12, V14, V3
 Variables close to 0: V22, Amount
 
--  Correlation whit classe: table for calculating the % correlation with the target value  :
+-  Correlation whit classe : table for calculating the % correlation with the target value  :
 
   ![table for calculating the % correlation with the target value](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Correlationcal.png)
 
 Step 8: Visualize the correlation matrix
 In this step, we visualize the correlation matrix as a heatmap to observe the relationships between all the variables in the dataset. The heatmap allows for a quick visualization of the linear associations between variables, whether they are positive, negative, or zero. The colors in the heatmap represent the strength of the correlation: a warm color (like red) indicates a strong positive correlation, while a cool color (like blue) indicates a strong negative correlation. This makes it easier to identify the most influential variables for predictive models.
 
--  Correlation Heatmap: Correlation Heatmap :
+-  Correlation Heatmap : Correlation Heatmap :
 
   ![Correlation Heatmap](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_different_variables.png)
 
--  Correlation Heatmap: Correlation Heatmap for fraudulent transactios  :
+-  Correlation Heatmap : Correlation Heatmap for fraudulent transactios  :
 
   ![Correlation Heatmap for Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_fraudulent_transactions.png) 
 
--  Correlation Heatmap: Correlation Heatmap for non-fraudulent transactios  :
+-  Correlation Heatmap : Correlation Heatmap for non-fraudulent transactios  :
 
   ![Correlation Heatmap for non-Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_nonfraudulent_transaction.png) 
 
@@ -135,14 +135,14 @@ In this step, we visualize the correlation matrix as a heatmap to observe the re
 Step 9: Visualize the distribution of transaction amounts with a boxplot
 In this step, we use a boxplot to visualize the distribution of transaction amounts. A boxplot provides a summary of the distribution of numerical values by showing the quartiles, median, and potential outliers. This helps in understanding the spread of transaction amounts and detecting extreme values that could influence our predictive models.
 
--  Distribution of transaction amounts: Visualize the distribution of transaction amounts with a boxplot :
+-  Distribution of transaction amounts : Visualize the distribution of transaction amounts with a boxplot :
 
   ![Visualize the distribution of transaction amounts with a boxplot](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_of_transaction_amounts.png)
 
 Step 10: Visualize the distribution of principal features (PCA components)
 In this step, we use PCA (Principal Component Analysis) to reduce the dimensionality of the data and visualize the main features or components extracted. We display the distribution of the principal components to better understand how the variables are represented in a lower-dimensional space. This helps in analyzing whether certain components explain a significant portion of the data variance and in detecting underlying patterns that can be useful for classification or fraud detection.
 
--  Feature Distribution (PCA Components): Visualize the distribution of principal features :
+-  Feature Distribution (PCA Components) : Visualize the distribution of principal features :
 
   ![Visualize the distribution of principal features](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/feature_distribution_of_importantfeatur.png)
 
