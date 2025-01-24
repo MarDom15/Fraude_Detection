@@ -34,6 +34,7 @@ Fraud detection models aim to classify transactions as either fraudulent or non-
 
 ## 🔍 **2. Data Exploration (EDA)**
 The dataset provides transaction information, including numerical attributes, amount, and a fraud label.
+Step 1: Load the Dataset
 
 -  Data set: Head of Dataset:
   ![Head of Data set](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Head_data.png)
@@ -44,6 +45,66 @@ In this step, we display the DataFrame information, including the number of rows
 
 -  Data set: Dataframe Information:
   ![Dataframe Information](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/data_types.png)
+
+Step 3: Visualize the distribution of classes
+In this step, we visualize the distribution of classes (fraudulent and non-fraudulent) in the dataset. This helps in understanding the class balance and identifying any potential imbalances, which can affect the performance of machine learning models.
+
+-  Distribution: Visualisation of Distribution of classes:
+  ![Distribution of classes](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/class_distribution.png)
+
+Step 4: Statistical summary of the data
+In this step, we generate a statistical summary of the data by calculating measures such as mean, standard deviation, minimum and maximum values, and quartiles. This provides an overview of the data's characteristics and helps in detecting any anomalies or outliers in the features.
+
+-  Statistical Summary: Statistical Summary of the data:
+  ![Statistical Summary](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/statistical_data_sunnary.png)
+
+Step 5: Visualize the distribution of fraudulent transaction amounts
+In this step, we visualize the distribution of fraudulent transaction amounts. This helps in understanding the patterns related to fraudulent transactions and identifying specific trends, such as higher or lower amounts associated with fraud.
+
+-  Visualisation of distribution: Visualize the distribution of fraudulent transaction amounts :
+  ![Visualize the distribution of fraudulent transaction amounts](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_fraudulent_transaction.png)
+
+Step 6: Visualize the distribution of non-fraudulent transaction amounts
+In this step, we visualize the distribution of non-fraudulent transaction amounts. This analysis helps in understanding the patterns related to legitimate transactions and identifying trends or specific characteristics of amounts associated with non-fraudulent transactions.
+
+-  Visualisation of distribution: Visualize the distribution of non-fraudulent transaction amounts :
+  ![Visualize the distribution of non-fraudulent transaction amounts](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_nonfraudulent_transaction.png)
+
+Step 7: Calculation of the correlation of all data with the target label 'Class'.
+
+Interpretation of correlation results:
+- Perfect positive correlation (1):
+When one variable increases, the other increases in a proportional manner.
+This means there is a direct relationship between the two variables. For instance, a correlation of 1 between two variables implies that for every unit increase in the first variable, the second variable increases in a determined way.
+- No correlation (0):
+The variables are not related to each other.
+This indicates that there is no linear relationship between the two variables, meaning that an increase in one does not have a direct or predictable impact on the other.
+- Perfect negative correlation (-1):
+When one variable increases, the other decreases in a proportional manner.
+This implies a strict inverse relationship between the two variables. For example, a correlation of -1 means that for every unit increase in the first variable, the second variable will decrease in a defined way.
+Strong and weak correlations:
+Strongly positively correlated variables:
+
+- V4 (0.735981) and V11 (0.724278) show significant positive relationships with the target variable Class. These variables have correlations close to 1, indicating they are strong predictors for Class in a machine learning model. They increase together significantly.
+Weakly positively correlated variables:
+
+- V2 (0.491878) and Amount (0.002261) show positive relationships, but their strength is weaker. Although there is a tendency for both to increase together, the impact is not as strong, and their contribution to predicting Class is lesser.
+Weakly negatively correlated variables:
+
+- V15 (-0.037948) to V14 (-0.805669) indicate negative relationships. For instance, V12 (-0.768579) and V14 (-0.805669) have strong negative correlations. This means that as these variables increase, the likelihood of Class being fraudulent decreases, which could be critical for fraud detection.
+
+Practical applications:
+The most important variables for prediction are those with values close to 1 or -1, as they are strongly correlated with Class. Variables with correlations close to 0, like V22 or Amount, might be less relevant in a model unless they hold specific contextual significance.
+
+C/C
+Strong positive variables: V4, V11
+Strong negative variables: V12, V14, V3
+Variables close to 0: V22, Amount
+
+-  Correlation whit classe: table for calculating the % correlation with the target value  :
+  ![table for calculating the % correlation with the target value]()
+
+
 
 
 2. Visualize feature correlations.
