@@ -304,9 +304,9 @@ link :
 1. Install Jenkins and Prerequisites
 
 Before starting, ensure that Jenkins is installed and set up on your machine or server.
-- Install Jenkins: If you haven't already, you can follow the official Jenkins installation instructions.
-- Configure Jenkins: Once Jenkins is installed, access the UI at http://localhost:8080 (by default).
-- Install necessary plugins: Go to Manage Jenkins > Manage Plugins, and make sure the following plugins are installed:
+  - Install Jenkins: If you haven't already, you can follow the official Jenkins installation instructions.
+  - Configure Jenkins: Once Jenkins is installed, access the UI at http://localhost:8080 (by default).
+  - Install necessary plugins: Go to Manage Jenkins > Manage Plugins, and make sure the following plugins are installed:
 
                 - Git (if you use Git for version control)
                 - Pipeline (required to create Jenkins pipelines)
@@ -314,21 +314,21 @@ Before starting, ensure that Jenkins is installed and set up on your machine or 
 
 2. Create a New Pipeline Job
 
-1- Go to the Jenkins dashboard and click New Item in the left sidebar.
-2- Name your job (e.g., FraudDetectionPipeline).
-3- Select the Pipeline option (this will allow you to create a pipeline using a Jenkinsfile).
-4- Click OK.
+- Go to the Jenkins dashboard and click New Item in the left sidebar.
+- Name your job (e.g., FraudDetectionPipeline).
+- Select the Pipeline option (this will allow you to create a pipeline using a Jenkinsfile).
+- Click OK.
 
 3. Configure the Pipeline Job
 
 Define the Git Repository
 If your project is hosted on a Git repository (e.g., GitHub, GitLab), configure the connection to that repository:
 
-1- In the Pipeline section, under Definition, select Pipeline script from SCM.
-2- In SCM, choose Git.
-3-In Repository URL, provide the URL of your Git repository (e.g., https://github.com/username/repository.git).
-4- Add credentials if needed (username/password or SSH key).
-5- In Branch to build, specify the branch you want to use (e.g., main or master).
+  - In the Pipeline section, under Definition, select Pipeline script from SCM.
+  - In SCM, choose Git.
+  -In Repository URL, provide the URL of your Git repository (e.g., https://github.com/username/repository.git).
+  - Add credentials if needed (username/password or SSH key).
+  - In Branch to build, specify the branch you want to use (e.g., main or master).
 
 2. **Docker Hub:** Stores Docker images for easy access.
 
