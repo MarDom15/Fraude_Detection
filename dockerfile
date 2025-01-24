@@ -14,13 +14,18 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copier le dossier models
-COPY models/ /app/models/
+COPY Models/ /app/Models/
+
+
 
 
 # Copier le dossier apps à partir de scripts/apps
-# COPY scripts/apps/ ./apps/
+COPY scripts/ /app/scripts/
+#COPY scripts/* /app/scripts/
+#COPY scripts/.* /app/scripts/
 
-COPY app.py ./
+
+# COPY app.py ./
 
 # Exposer le port sur lequel l'application s'exécute
 EXPOSE 8502
