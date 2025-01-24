@@ -1,5 +1,3 @@
-# Writing the entire document content into a Markdown file
-content = """
 # 🌟 **Credit Card Fraud Detection**
 *Fraud detection using Logistic Regression, Random Forest, and Deep Learning (MLP) with MLOps and Streamlit.*
 
@@ -125,6 +123,8 @@ WORKDIR /app
 
 # Start Streamlit
 CMD ["streamlit", "run", "app.py"]
+```
+---
 
 ## 🌐 **Deployment on Streamlit and AWS**
 1. **Streamlit Community:** Simple and fast deployment for initial testing.
@@ -143,6 +143,8 @@ CMD ["streamlit", "run", "app.py"]
 ### Building an MLOps Pipeline:
 1. **CI/CD with Jenkins:** Automates code integration and deployment.
 2. **Docker Hub:** Stores Docker images for easy access.
+
+---
 
 **Pipeline Example:**
 ```yaml
@@ -166,6 +168,8 @@ pipeline {
         }
     }
 }
+```
+---
 
 ## 🗂 **8. Data**
 The dataset, available on Kaggle, includes anonymized credit card transaction data.
@@ -184,5 +188,5 @@ This project was created by:
 - **M. Domche**  
 For questions or suggestions, contact me at [mdomche@example.com](mailto:mdomche@example.com).
 
-
+---
 
