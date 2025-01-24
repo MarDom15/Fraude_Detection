@@ -167,24 +167,16 @@ Step 2 : Scaling the Data (Normalization or Standardization)
 Scaling the data is a crucial preprocessing step to ensure that all features contribute equally to the model's performance. Depending on the model and the nature of the dataset, we can use normalization (scaling values to a range, typically [0, 1]) or standardization (centering data around a mean of 0 with a standard deviation of 1). For this project, scaling ensures that features such as transaction amounts, which may have large ranges, do not dominate the learning process. Proper scaling improves convergence during training and enhances model performance, especially for distance-based or gradient-sensitive algorithms.
 
 - Normalization or Standardization : Normalization or Standardization of important values :
-  ![Normalization or Standardization of important values]()
+  ![Normalization or Standardization of important values](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/nbormalisation.png)
 
-
-
-
-1. **Feature Scaling:** Normalize numerical features for better performance in algorithms.
-2. **Imbalance Handling:** Use SMOTE or similar techniques.
-3. **Train-Test Split:** Divide data into training, validation, and test sets.
-
-### Theoretical Context:
-Preprocessing improves convergence and ensures that models generalize well to unseen data.
-
-[View Visuals for Data Preparation](#)
 
 ---
 
 ## 🏃️ **4. Model Training**
 The project employs three different algorithms:
+
+### Splitting the Data
+
 
 1. **Logistic Regression:** A baseline model for linear separability.
 2. **Random Forest:** A robust ensemble model for feature importance and high accuracy.
