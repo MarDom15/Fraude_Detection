@@ -39,6 +39,11 @@ Step 1: Load the Dataset
 -  Data set: Head of Dataset:
   ![Head of Data set](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Head_data.png)
 
+Step 1': Check for missing values in the DataFrame
+
+-  MIssing Values:Check for missing values in the DataFrame :
+  ![Check for missing values in the DataFrame](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/missing_values.png)
+
 ### Key Steps:
 Step 2: Display DataFrame Information
 In this step, we display the DataFrame information, including the number of rows, the number of columns, the data type of each column, and whether any missing values are present. This helps in understanding the structure of the data and identifying potential issues.
@@ -102,7 +107,48 @@ Strong negative variables: V12, V14, V3
 Variables close to 0: V22, Amount
 
 -  Correlation whit classe: table for calculating the % correlation with the target value  :
-  ![table for calculating the % correlation with the target value]()
+  ![table for calculating the % correlation with the target value](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/Correlationcal.png)
+
+Step 8: Visualize the correlation matrix
+In this step, we visualize the correlation matrix as a heatmap to observe the relationships between all the variables in the dataset. The heatmap allows for a quick visualization of the linear associations between variables, whether they are positive, negative, or zero. The colors in the heatmap represent the strength of the correlation: a warm color (like red) indicates a strong positive correlation, while a cool color (like blue) indicates a strong negative correlation. This makes it easier to identify the most influential variables for predictive models.
+
+-  Correlation Heatmap: Correlation Heatmap :
+  ![Correlation Heatmap](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_different_variables.png)
+
+-  Correlation Heatmap: Correlation Heatmap for fraudulent transactios  :
+  ![Correlation Heatmap for Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_fraudulent_transactions.png) 
+
+-  Correlation Heatmap: Correlation Heatmap for non-fraudulent transactios  :
+  ![Correlation Heatmap for non-Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_nonfraudulent_transactions.png) 
+
+
+Step 9: Visualize the distribution of transaction amounts with a boxplot
+In this step, we use a boxplot to visualize the distribution of transaction amounts. A boxplot provides a summary of the distribution of numerical values by showing the quartiles, median, and potential outliers. This helps in understanding the spread of transaction amounts and detecting extreme values that could influence our predictive models.
+
+-  Distribution of transaction amounts: Visualize the distribution of transaction amounts with a boxplot :
+  ![Visualize the distribution of transaction amounts with a boxplot](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/distribution_of_transaction_amounts.png)
+
+Step 10: Visualize the distribution of principal features (PCA components)
+In this step, we use PCA (Principal Component Analysis) to reduce the dimensionality of the data and visualize the main features or components extracted. We display the distribution of the principal components to better understand how the variables are represented in a lower-dimensional space. This helps in analyzing whether certain components explain a significant portion of the data variance and in detecting underlying patterns that can be useful for classification or fraud detection.
+
+-  Feature Distribution (PCA Components): Visualize the distribution of principal features :
+  ![Visualize the distribution of principal features](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/feature_distribution_of_importantfeatur.png)
+
+Step 11: Visualize relationships between features for fraudulent and non-fraudulent transactions
+In this step, we visualize the relationships between features specifically for fraudulent and non-fraudulent transactions. This helps to examine how different variables interact in the context of fraudulent and non-fraudulent transactions and to identify patterns or common behaviors. By using graphs such as scatter plots, pair plots, or correlation matrices, we can better understand the complex relationships that could be leveraged for fraud detection.
+
+-  Visualize relationships between features : Visualize relationships between features for fraudulent transactions  :
+  ![Visualize relationships between features for fraudulent transactions](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/pairplot_1000_fraudulent.png)
+
+-  Visualize relationships between features : Visualize relationships between features for non-fraudulent transactions  :
+  ![Visualize relationships between features for non-fraudulent transactions](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/pairplot_1000_nonfraudulent.png)
+
+
+Step 12: Visualize fraud vs non-fraud transactions with a scatterplot
+In this step, we use a scatterplot to compare fraudulent and non-fraudulent transactions. This helps visualize the differences between the two classes based on two or more features. The scatterplot makes it easier to identify clusters, anomalies, or specific patterns associated with each transaction type. By using distinct colors for fraudulent and non-fraudulent transactions, this visualization highlights any potential segregation of the classes in the feature space.
+
+-  Visualisation of fraud vs non-fraud transaction : Visualize fraud vs non-fraud transactions with a scatterplo :
+  ![Visualize fraud vs non-fraud transactions with a scatterplo](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/scatterplot_id_vs_amount_fraud_Vs_nonfraud.png)
 
 
 
