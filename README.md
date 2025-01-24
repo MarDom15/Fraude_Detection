@@ -119,7 +119,7 @@ In this step, we visualize the correlation matrix as a heatmap to observe the re
   ![Correlation Heatmap for Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_fraudulent_transactions.png) 
 
 -  Correlation Heatmap: Correlation Heatmap for non-fraudulent transactios  :
-  ![Correlation Heatmap for non-Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_nonfraudulent_transactions.png) 
+  ![Correlation Heatmap for non-Fraud Transaction](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/heatmap_correlation_nonfraudulent_transaction.png) 
 
 
 Step 9: Visualize the distribution of transaction amounts with a boxplot
@@ -151,26 +151,27 @@ In this step, we use a scatterplot to compare fraudulent and non-fraudulent tran
   ![Visualize fraud vs non-fraud transactions with a scatterplo](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/scatterplot_id_vs_amount_fraud_Vs_nonfraud.png)
 
 
-
-
-2. Visualize feature correlations.
-3. Check for outliers and anomalies.
-
-### Theoretical Context:
-The dataset is highly imbalanced, requiring techniques like SMOTE (Synthetic Minority Oversampling) or class weighting during model training.
-
-📊 **Visualizations:**
-- **Class Distribution:** Fraud vs. legitimate transactions.
-- **Feature Correlation Heatmap:** Identifies significant relationships between features.
-
-[View Visuals for EDA](#)
-
 ---
 
-## 🛠️ **3. Data Preparation**
-Data preparation ensures consistency and suitability for modeling.
+## 🛠️ **3. Data Preprocessing**
+Data preprocessing is a critical step in machine learning projects, ensuring raw data is transformed into a suitable format for model training. In this project, preprocessing was simplified as all data is numerical, eliminating the need for encoding categorical variables. Additionally, the dataset is balanced, removing the necessity for resampling techniques like oversampling or undersampling to address class imbalances. Furthermore, important features have already been identified based on their correlation with the target variable ("class"), allowing the focus to remain on refining the model’s performance without unnecessary dimensionality reduction or feature selection steps.
 
 ### Key Steps:
+Step 1 : Data Cleaning
+Data cleaning is the first and most essential step in preprocessing. It involves handling missing values, duplicates, and inconsistencies in the dataset to ensure its quality and reliability. For this dataset, as the data is already numerical and complete, the cleaning process focuses on detecting and removing duplicates, handling outliers where necessary, and ensuring that all features are correctly scaled or standardized if required. A clean dataset ensures that the machine learning models can train effectively without being biased by noise or errors
+
+- Outliers Cheking for V4, V11, V12, V14, V3 : Outlier cheking for important values :
+  ![OUtliers Cheking](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/outliers_im_importantv.png)
+
+Step 2 : Scaling the Data (Normalization or Standardization)
+Scaling the data is a crucial preprocessing step to ensure that all features contribute equally to the model's performance. Depending on the model and the nature of the dataset, we can use normalization (scaling values to a range, typically [0, 1]) or standardization (centering data around a mean of 0 with a standard deviation of 1). For this project, scaling ensures that features such as transaction amounts, which may have large ranges, do not dominate the learning process. Proper scaling improves convergence during training and enhances model performance, especially for distance-based or gradient-sensitive algorithms.
+
+- Normalization or Standardization : Normalization or Standardization of important values :
+  ![Normalization or Standardization of important values]()
+
+
+
+
 1. **Feature Scaling:** Normalize numerical features for better performance in algorithms.
 2. **Imbalance Handling:** Use SMOTE or similar techniques.
 3. **Train-Test Split:** Divide data into training, validation, and test sets.
