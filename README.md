@@ -55,6 +55,7 @@ Step 3: Visualize the distribution of classes
 In this step, we visualize the distribution of classes (fraudulent and non-fraudulent) in the dataset. This helps in understanding the class balance and identifying any potential imbalances, which can affect the performance of machine learning models.
 
 -  Distribution: Visualisation of Distribution of classes:
+
   ![Distribution of classes](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/class_distribution.png)
 
 Step 4: Statistical summary of the data
@@ -277,7 +278,7 @@ docker pull yourusername/yourimage:tag
 
 For deploying the application on Streamlit, the process is straightforward. First, you need to go to Streamlit Community Cloud, which offers free hosting for simple applications. To start, sign in with your GitHub account, as Streamlit integrates directly with GitHub repositories. After logging in, you can simply connect your GitHub repository containing your Streamlit application. Streamlit will automatically detect the necessary files and dependencies, build the application, and deploy it to the cloud. Following the on-screen instructions provided by Streamlit ensures a smooth deployment process. The benefit of using Streamlit is its ease of use, with minimal configuration required to make the application publicly available.
 
-link : 
+link : https://fraudedetection-pzfbnrstxvu9gqgghithfg.streamlit.app/
 
 2. **AWS EC2:** Robust cloud deployment using Docker and Jenkins for CI/CD.
 
@@ -289,10 +290,12 @@ docker pull yourusername/yourimage:tag
 ```
 ---
 
+link : 
+
+
 ## 📊 **7. Monitoring and MLOps**
 
 ### Monitoring Tools:
-- **Grafana:** Visualize metrics such as latency and errors.
 - **Prometheus:** Collect real-time metrics.
 
 ### Building an MLOps Pipeline:
