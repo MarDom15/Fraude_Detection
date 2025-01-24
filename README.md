@@ -7,15 +7,14 @@
 1. [✨ Introduction](#introduction)  
 2. [🔍 Data Exploration (EDA)](#data-exploration-eda)  
 3. [🛠️ Data Preparation](#data-preparation)  
-4. [🏃️ Model Training](#model-training)  
-5. [✅ Testing and Evaluation](#testing-and-evaluation)  
-6. [🚀 Deployment](#deployment)  
+4. [🏃️ Model Training, Testint and Evaluation](#model-training)    
+5. [🚀 Deployment](#deployment)  
     - [📦 Creating a Docker Image](#creating-a-docker-image)  
     - [🌐 Deployment on Streamlit and AWS](#deployment-on-streamlit-and-aws)  
-7. [📊 Monitoring and MLOps](#monitoring-and-mlops)  
+6. [📊 Monitoring and MLOps](#monitoring-and-mlops)  
     - [🔄 Building an MLOps Pipeline](#building-an-mlops-pipeline)  
-8. [🗂 Data](#data)  
-9. [🙌 Contributors](#contributors)  
+7. [🗂 Data](#data)  
+8. [🙌 Contributors](#contributors)  
 
 ---
 
