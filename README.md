@@ -334,7 +334,7 @@ If your project is hosted on a Git repository (e.g., GitHub, GitLab), configure 
 
 ---
 
-**Pipeline Example:**
+**Pipeline:**
 ```yaml
 pipeline {
     agent any
