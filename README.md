@@ -300,6 +300,35 @@ link :
 
 ### Building an MLOps Pipeline:
 1. **CI/CD with Jenkins:** Automates code integration and deployment.
+
+1. Install Jenkins and Prerequisites
+
+Before starting, ensure that Jenkins is installed and set up on your machine or server.
+- Install Jenkins: If you haven't already, you can follow the official Jenkins installation instructions.
+- Configure Jenkins: Once Jenkins is installed, access the UI at http://localhost:8080 (by default).
+- Install necessary plugins: Go to Manage Jenkins > Manage Plugins, and make sure the following plugins are installed:
+
+                - Git (if you use Git for version control)
+                - Pipeline (required to create Jenkins pipelines)
+                - Docker (if Docker is used in your pipeline)
+
+2. Create a New Pipeline Job
+
+G1- o to the Jenkins dashboard and click New Item in the left sidebar.
+2- Name your job (e.g., FraudDetectionPipeline).
+3- Select the Pipeline option (this will allow you to create a pipeline using a Jenkinsfile).
+4- Click OK.
+
+3. Configure the Pipeline Job
+
+Define the Git Repository
+If your project is hosted on a Git repository (e.g., GitHub, GitLab), configure the connection to that repository:
+1- In the Pipeline section, under Definition, select Pipeline script from SCM.
+2- In SCM, choose Git.
+3-In Repository URL, provide the URL of your Git repository (e.g., https://github.com/username/repository.git).
+4- Add credentials if needed (username/password or SSH key).
+5- In Branch to build, specify the branch you want to use (e.g., main or master).
+
 2. **Docker Hub:** Stores Docker images for easy access.
 
 ---
@@ -309,19 +338,18 @@ link :
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Pull Docker Image') {
             steps {
-                sh 'docker build -t fraud-detection .'
-            }
-        }
-        stage('Push to Docker Hub') {
-            steps {
-                sh 'docker push my-docker-hub-repo/fraud-detection'
+                script {
+                    sh 'docker pull fraud:latest'  // Récupère l'image locale ou distante
+                }
             }
         }
         stage('Deploy to AWS') {
             steps {
-                sh 'ssh ec2-user@<AWS_IP> docker run -d -p 8501:8501 my-docker-hub-repo/fraud-detection'
+                script {
+                    sh './deploy_aws.sh'  // On créera ce script pour déployer sur AWS
+                }
             }
         }
     }
@@ -336,8 +364,6 @@ The dataset, available on Kaggle, includes anonymized credit card transaction da
 - [Credit Card Fraud Detection Dataset (Kaggle)](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023)
 
 The dataset contains various features related to credit card transactions, such as transaction amount, user details (anonymized), and whether the transaction was fraudulent or not. It is designed for use in machine learning models for fraud detection.
-
-[View Visuals for Data](#)
 
 ---
 
