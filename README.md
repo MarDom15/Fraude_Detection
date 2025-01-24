@@ -314,7 +314,7 @@ docker pull yourusername/yourimage:tag
 ```
 ---
 
-link : 
+link : http://16.170.228.250:8502
 
 
 ## 📊 **7. Monitoring and MLOps**
