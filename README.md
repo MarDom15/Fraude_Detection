@@ -176,11 +176,49 @@ Scaling the data is a crucial preprocessing step to ensure that all features con
 The project employs three different algorithms:
 
 ### Splitting the Data
+Splitting the data into training and testing sets is a critical step to evaluate the performance of machine learning models. Typically, the dataset is divided into two parts: a training set, used to train the model, and a testing set, used to assess its accuracy on unseen data. For this project, an 80/20 split is commonly used, where 80% of the data is allocated to training and 20% to testing. This approach ensures that the model generalizes well and avoids overfitting, as its performance is evaluated on data it has never encountered during training.
+
+- Data split : Data in 2 split training and test :
+  ![Test and Training data](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/slipt.png)
 
 
 1. **Logistic Regression:** A baseline model for linear separability.
+
+- logistic_regression_evaluation : Evaluation of logistic regression :
+  ![Logistic regression Evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/classification_report_logistic_regression.png)
+
+
+Interpretation : 
+The logistic regression model demonstrated excellent performance in detecting fraudulent transactions, with an accuracy of 0.96, high recall for both classes (0.98 for non-fraudulent transactions and 0.94 for fraudulent transactions), and an F1 score of 0.96 for each class. Although the model correctly identified the majority of fraudulent transactions, it missed 3,645 frauds (false negatives), which is relatively low compared to the total number of frauds. The area under the precision-recall curve (AUPRC) of 0.9921 indicates that the model handles class imbalance well, with a strong ability to distinguish frauds. In summary, the model is efficient, reliable, and effective in detecting fraudulent transactions while minimizing errors
+
 2. **Random Forest:** A robust ensemble model for feature importance and high accuracy.
+
+- Random Forest Evaluation : Evaluation of Random Forest :
+ ![Random Forest Evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/classification_report_random_forest.png)
+
+Interpretation : 
+The Random Forest model shows excellent performance in detecting fraudulent transactions, with a precision of 0.98 and a recall of 0.97 for frauds, and a precision of 0.97 and a recall of 0.99 for non-fraudulent transactions. It effectively handles class imbalance, with an AUPRC of 0.9981, indicating strong ability to distinguish frauds. The errors are low, with only 659 false positives and 1,803 false negatives. The most important features for the model are V4, V12, and V14, which have a significant impact on predictions. Overall, the model is efficient, balanced, and reliable in detecting frauds.
+
+### Calculate probabilities for ROC Curve
+- ROC Curve : ROC Crve for and ROC score for logistic and RAndom :
+ ![ROC Curve and ROC Score](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/ROC-AUC_%20Curve.png)
+
+
+
 3. **Deep Learning (MLP):** A neural network-based approach to capture complex patterns.
+
+- MLP evaluation : Evaluation of MLP :
+  ![MLP Evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/classification_report_MLP.png)
+
+- Epochs : 10 Epochs for training :
+  ![Epochs](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/epochs_MLP.png)
+
+- MLP evaluation : Evaluation of MLP :
+  ![MLP evaluation]()
+
+Interpretation : 
+
+
 
 ### Training Steps:
 - Apply cross-validation for model tuning.
