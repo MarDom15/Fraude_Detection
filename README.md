@@ -204,7 +204,6 @@ The Random Forest model shows excellent performance in detecting fraudulent tran
  ![ROC Curve and ROC Score](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/ROC-AUC_%20Curve.png)
 
 
-
 3. **Deep Learning (MLP):** A neural network-based approach to capture complex patterns.
 
 - MLP evaluation : Evaluation of MLP :
@@ -214,69 +213,80 @@ The Random Forest model shows excellent performance in detecting fraudulent tran
   ![Epochs](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/epochs_MLP.png)
 
 - MLP evaluation : Evaluation of MLP :
-  ![MLP evaluation]()
-
-Interpretation : 
+  ![MLP evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/evaluation_mlp.png)
 
 
+- Precision-Recall curve : Precision-Recall Curve MLP :
+  ![MLP evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/recall%20curce.png)
 
-### Training Steps:
-- Apply cross-validation for model tuning.
-- Hyperparameter optimization using grid search or random search.
+- Training Perfomance : Training Perfomance per epochs :
+  ![MLP evaluation](https://github.com/MarDom15/Fraude_Detection/blob/main/image_prog/accuracy_over_epochs.png)
 
-### Theoretical Context:
-- **Logistic Regression:** Well-suited for simple datasets with linear relationships.
-- **Random Forest:** Captures non-linearities and ranks feature importance.
-- **MLP:** Exploits the power of deep learning for complex patterns.
+Interpretation :MLP Exploits the power of deep learning for complex patterns.
 
-[View Visuals for Model Training](#)
-
----
-
-## ✅ **5. Testing and Evaluation**
-Evaluation metrics help measure model performance on unseen data.
-
-### Metrics Used:
-1. **Accuracy:** Overall correctness.
-2. **Precision:** Correctness of fraud predictions.
-3. **Recall:** Sensitivity to fraud cases.
-4. **F1-score:** Harmonic mean of precision and recall.
-
-🔢 **Confusion Matrix:** Provides insights into classification errors.
-
-[View Visuals for Testing and Evaluation](#)
 
 ---
 
 ## 🚀 **6. Deployment**
-The deployment involves Streamlit Community Cloud and AWS EC2, ensuring scalability and accessibility.
+The deployment begins with the creation of a Docker image. Docker is a tool that allows us to package applications and their dependencies into a standardized unit called a container, which can run anywhere. The first step is to create a Dockerfile, which contains instructions to build the image. After building the image, it is pushed to Docker Hub, a platform where Docker images can be stored and shared. To push the image to Docker Hub, you must first create an account on Docker Hub, log in to your account, and then push the Docker image from your local machine to Docker Hub using the following command:
 
 ### 📦 **Creating a Docker Image**
 A Docker image packages the application and dependencies for portability.
 
 **Dockerfile:**
 ```dockerfile
+# Use a Python base image
 FROM python:3.9-slim
 
-# Install dependencies
-COPY requirements.txt /app/requirements.txt
-RUN pip install -r /app/requirements.txt
-
-# Copy application files
-COPY . /app
+# Set the working directory
 WORKDIR /app
 
-# Start Streamlit
-CMD ["streamlit", "run", "app.py"]
+# Copy the requirements.txt file into the container
+COPY requirements.txt ./
+
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all the local content into the container
+COPY . .
+
+# Copy the Models directory
+COPY Models/ /app/Models/
+
+# Copy the scripts directory
+COPY scripts/ /app/scripts/
+#COPY scripts/* /app/scripts/
+#COPY scripts/.* /app/scripts/
+
+# COPY app.py ./
+
+# Expose the port the application runs on
+EXPOSE 8502
+
+# Default command to run the Streamlit application
+CMD ["streamlit", "run", "/app/scripts/apps/app.py", "--server.port=8502", "--server.address=0.0.0.0"]
+```
+---
+```bash
+docker pull yourusername/yourimage:tag
 ```
 ---
 
 ## 🌐 **Deployment on Streamlit and AWS**
 1. **Streamlit Community:** Simple and fast deployment for initial testing.
+
+For deploying the application on Streamlit, the process is straightforward. First, you need to go to Streamlit Community Cloud, which offers free hosting for simple applications. To start, sign in with your GitHub account, as Streamlit integrates directly with GitHub repositories. After logging in, you can simply connect your GitHub repository containing your Streamlit application. Streamlit will automatically detect the necessary files and dependencies, build the application, and deploy it to the cloud. Following the on-screen instructions provided by Streamlit ensures a smooth deployment process. The benefit of using Streamlit is its ease of use, with minimal configuration required to make the application publicly available.
+
+link : 
+
 2. **AWS EC2:** Robust cloud deployment using Docker and Jenkins for CI/CD.
 
-[View Visuals for Deployment](#)
+For AWS EC2 deployment, the process starts by creating an account on AWS and accessing the EC2 service. EC2 (Elastic Compute Cloud) allows us to run virtual machines (instances) on the cloud. Once the account is created, the next step is to launch an EC2 instance, which serves as the virtual server to run our application.
+Once the EC2 instance is up and running, we install Docker on the instance. The next step is to pull the Docker image from Docker Hub using the following command:
 
+```bash
+docker pull yourusername/yourimage:tag
+```
 ---
 
 ## 📊 **7. Monitoring and MLOps**
