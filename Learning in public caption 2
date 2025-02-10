@@ -10,3 +10,8 @@ other neural network architectures and automating cloud deployment.
 
 
 Project 2: 
+The Uber and Lyft Ride Price Prediction project aims to develop a machine learning model for accurately forecasting Uber ride prices using historical data. 
+Key factors considered include distance, time of day, weather, and surge pricing. The dataset was sourced from Kaggle and underwent thorough preprocessing, 
+including feature engineering and normalization. Various models were tested, with XGBoost performing best. The model was deployed via a Flask API, 
+containerized with Docker, and orchestrated using Kubernetes. Future improvements include real-time data integration, deep learning models, 
+and a user-friendly interface. This project showcases an end-to-end ML workflow as part of the MLOps Zoomcamp course.
