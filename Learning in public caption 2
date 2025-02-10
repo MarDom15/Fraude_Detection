@@ -1,0 +1,12 @@
+Project 1 : 
+The MLzoomcamp Capstone project aims to develop an image classification algorithm for seven categories 
+('airplane', 'person', 'flower', 'fruit', 'cat', 'dog', 'car', 'motorbike') using a dataset available on Kaggle. 
+The exploratory data analysis helped standardize image sizes and split the dataset into three parts 
+(60% training, 20% validation, 20% testing). Three models were tested: Xception (82.6%), a custom CNN (85.4%), 
+and VGG16 (98%). Hyperparameters were optimized to improve performance. The final model is deployed using FastAPI, 
+executable locally or via Docker, and was temporarily hosted on AWS EC2. Overall, this project is well-designed and documented, 
+offering good reproducibility and an efficient architecture. However, potential improvements could include experimenting with 
+other neural network architectures and automating cloud deployment.
+
+
+Project 2: 
