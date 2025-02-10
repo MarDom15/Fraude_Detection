@@ -15,3 +15,10 @@ Key factors considered include distance, time of day, weather, and surge pricing
 including feature engineering and normalization. Various models were tested, with XGBoost performing best. The model was deployed via a Flask API, 
 containerized with Docker, and orchestrated using Kubernetes. Future improvements include real-time data integration, deep learning models, 
 and a user-friendly interface. This project showcases an end-to-end ML workflow as part of the MLOps Zoomcamp course.
+
+Project 3: 
+The Body Performance Classification project focuses on predicting individuals' fitness levels (A, B, C, or D) based on various physiological and 
+performance metrics, such as age, gender, body composition, blood pressure, and physical test results. The dataset is used for multiclass classification, 
+with models trained using algorithms like Random Forest, Decision Tree, and XGBoost. Evaluation is based on the F1 score to handle potential class imbalances. 
+The project includes data preprocessing, exploratory analysis, and feature engineering to improve model performance, with a baseline F1 score of 75%. 
+Setup instructions involve using pipenv for local deployment and Docker for containerization. A streamlit app is available for simulation.
